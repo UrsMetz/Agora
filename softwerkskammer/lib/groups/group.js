@@ -21,6 +21,7 @@ class Group {
       this.mapX = object.mapX;
       this.mapY = object.mapY;
       this.shortName = object.shortName;
+      this.contactTheOrganizers = object.contactTheOrganizers;
     } else {
       this.color = '#FF00FF';
     }
@@ -63,6 +64,10 @@ class Group {
     } else {
       return null;
     }
+  }
+
+  contactTheOrganizersEnabled() {
+    return this.contactTheOrganizers || false;
   }
 
   // Helper functions (static) -> look for a better place to implement
